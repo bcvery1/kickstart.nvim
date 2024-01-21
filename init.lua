@@ -190,15 +190,6 @@ require('lazy').setup({
   },
 
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
-  },
-
-  {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
@@ -318,6 +309,10 @@ vim.wo.colorcolumn = "100"
 -- Custom movement
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', '<leader><F5>', vim.cmd.UndotreeToggle)
+
+-- colorscheme
+vim.cmd.colorscheme "catppuccin"
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
