@@ -561,6 +561,9 @@ require('which-key').register({
 require('mason').setup()
 require('mason-lspconfig').setup()
 
+-- Custom lspconfig setup for gopls
+
+
 -- Enable the following language servers
 --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 --
@@ -571,10 +574,16 @@ require('mason-lspconfig').setup()
 --  define the property 'filetypes' to the map in question.
 local servers = {
   -- clangd = {},
+  angularls = {},
+  -- autotools-language-server = {},
+  cssls = {},
+  dockerls = {},
+  golangci_lint_ls = {},
   -- gopls = {},
-  -- pyright = {},
-  -- rust_analyzer = {},
-  -- tsserver = {},
+  pyright = {},
+  rust_analyzer = {},
+  tsserver = {},
+  yamlls = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   lua_ls = {
