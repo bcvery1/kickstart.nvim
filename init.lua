@@ -574,16 +574,16 @@ require('mason-lspconfig').setup()
 --  define the property 'filetypes' to the map in question.
 local servers = {
   -- clangd = {},
-  angularls = {},
+  -- angularls = {},
   -- autotools-language-server = {},
-  cssls = {},
-  dockerls = {},
-  golangci_lint_ls = {},
+  -- cssls = {},
+  -- dockerls = {},
+  -- golangci_lint_ls = {},
   -- gopls = {},
-  pyright = {},
-  rust_analyzer = {},
-  tsserver = {},
-  yamlls = {},
+  -- pyright = {},
+  -- rust_analyzer = {},
+  -- tsserver = {},
+  -- yamlls = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   lua_ls = {
