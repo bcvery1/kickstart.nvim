@@ -193,6 +193,7 @@ require('lazy').setup({
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     opts = {
       options = {
         icons_enabled = true,
@@ -682,3 +683,5 @@ vim.keymap.set('n', '<leader>ff', require("telescope.builtin").find_files, {})
 vim.keymap.set('n', '<leader>fg', require("telescope.builtin").live_grep, {})
 vim.keymap.set('n', '<leader>fb', require("telescope.builtin").buffers, {})
 vim.keymap.set('n', '<leader>fh', require("telescope.builtin").help_tags, {})
+vim.keymap.set('n', '<leader>fu', require('telescope.builtin').lsp_references, {})
+vim.api.nvim_set_keymap('n', '<leader>im', [[<cmd>lua require'telescope'.extensions.goimpl.goimpl{}<CR>]], {noremap=true, silent=true})
