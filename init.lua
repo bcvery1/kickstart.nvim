@@ -201,6 +201,13 @@ require('lazy').setup({
         component_separators = '|',
         section_separators = '',
       },
+      sections = {
+        lualine_c = { {'filename', path=2, fmt = function (path)
+          return table.concat({vim.fs.basename(vim.fs.dirname(path)),
+                              vim.fs.basename(path)}, package.config:sub(1, 1))
+        end
+        } },
+      },
     },
   },
 
